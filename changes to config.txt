@@ -1,0 +1,6 @@
+When using the lastest Raspian software and old voice hat. 
+cd /boot
+sudo nano config.txt
+Add the following line
+dtoverlay=googlevoicehat-soundcard
+save and close file
