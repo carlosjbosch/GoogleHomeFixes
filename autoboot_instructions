@@ -1,0 +1,33 @@
+Instructions to move to the demo folder (Step 23)
+
+Move to the demo directory (you can copy and paste the line)
+
+    cd ~/AIY-projects-python/src/examples/voice
+
+
+Auto Start Instructions:
+
+To ensure that your Google Home auto start. Please execute the following 
+commands.
+
+You can copy the lines and paste them at the cursor.
+
+Step 1: copy and paste
+    sudo cp assist.service-1 /etc/systemd/system/assist.service 
+
+Step 2: Copy your assistant demo to the Pi Folder
+
+    cd ~/AIY-projects-python/src/examples/voice 
+    cp assistant_library_demo_py main.py
+
+Step 3: Enable the Google Home service
+
+    sudo systemctl enable assist.service
+
+Step 4: Start the Google Home Service 
+
+    sudo systemctl start assist.service 
+
+Step 5: Reboot your Raspberry Pi
+
+    sudo sync;reboot 
