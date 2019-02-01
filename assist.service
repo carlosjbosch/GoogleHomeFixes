@@ -1,0 +1,14 @@
+[Unit]
+Description=Assist @ reboot
+
+[Service]
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+ExecStart=/home/pi/AIY-projects-python/src/examples/voice/main.py
+Restart=always
+User=pi
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=assist
+
+[Install]
+WantedBy=multi-user.target
